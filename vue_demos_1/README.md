@@ -1,29 +1,7 @@
-# vue-project
+Vue-cli3.x demo01之hello word
 
-## Project setup
-```
-yarn install
-```
+执行命令
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+yarn
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+yarn server
