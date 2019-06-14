@@ -1,7 +1,15 @@
 <template>
 	<div class="home">
-		<img alt="Vue logo" src="../assets/logo.png" @click='goToAbout'>
+		<img alt="Vue logo" src="../assets/logo.png">
 		<HelloWorld msg="Welcome to Your Vue.js App"/>
+		<p>方式1.path</p>
+		<button @click='goToAbout'>path利用js事件传递路由参数</button>
+		<br>
+		<router-link :to="{path:'/about',query:{code:'1'}}">path利用router-link传递路由参数</router-link>
+		<p>方式2.name</p>
+		<button @click='namegoToAbout'>name利用js事件传递路由参数</button>
+		<br>
+		<router-link :to="{name:'about',params:{code:'2'}}">name利用router-link传递路由参数</router-link>
 		<div>
 			<p v-text='test'></p>
 			<p v-html='test'></p>
@@ -33,8 +41,21 @@ export default {
 	},
 	methods: {
 		goToAbout() {
-			this.$router.push('/about/1')
+			this.$router.push({
+				path:'/about',
+				query:{
+					code:'1'
+				}
+			})
+		},
+		namegoToAbout() {
+			this.$router.push({
+				name:'about',
+				params:{
+					code:'2'
+				}
+			})
 		}
-	}
+   }
 }
 </script>
